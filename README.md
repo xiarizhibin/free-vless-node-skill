@@ -19,16 +19,16 @@
 作为 Agent Skill 放到你的 skills 目录即可（Claude Code / Cursor / Codex / DSH 等通用）：
 
 ```bash
-git clone https://github.com/<you>/free-vless-node.skill.git \
+git clone https://github.com/xiarizhibin/free-vless-node-skill.git \
   ~/.claude/skills/free-vless-node
 # 或
-cp -r free-vless-node ~/.agents/skills/
+cp -r free-vless-node-skill ~/.agents/skills/free-vless-node
 ```
 
 脚本依赖（仅二维码相关步骤需要）：
 
 ```bash
-cd free-vless-node && npm install
+cd free-vless-node-skill && npm install
 ```
 
 ## 目录
