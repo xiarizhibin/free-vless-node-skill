@@ -1,0 +1,10 @@
+{
+  "name": "free-vless-node-skill",
+  "private": true,
+  "description": "Helper deps for the free-vless-node Agent Skill (QR generation + readback)",
+  "license": "MIT",
+  "dependencies": {
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0"
+  }
+}

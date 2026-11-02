@@ -1,0 +1,36 @@
+{
+  "log": { "loglevel": "warning" },
+  "inbounds": [
+    { "port": 10809, "listen": "127.0.0.1", "protocol": "http" },
+    { "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": { "udp": false } }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "REPLACE_WITH_HOST",
+            "port": 443,
+            "users": [
+              { "id": "REPLACE_WITH_UUID", "encryption": "none" }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "REPLACE_WITH_HOST",
+          "alpn": ["http/1.1"],
+          "fingerprint": "chrome"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": { "Host": "REPLACE_WITH_HOST" }
+        }
+      }
+    }
+  ]
+}
